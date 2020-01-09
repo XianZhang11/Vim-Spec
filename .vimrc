@@ -75,7 +75,7 @@ Plug 'mattn/emmet-vim'
 Plug 'vim-scripts/indentpython.vim'
 
 
-
+Plug 'dhruvasagar/vim-table-mode'
 
 
 " New 

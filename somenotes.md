@@ -1,7 +1,8 @@
 # Some useful commands
 
 ## Vim 
--:noh	shortcut for :nohlsearch
+
+:noh	shortcut for :nohlsearch
 
 gg=G	fix indentation
 
@@ -10,7 +11,9 @@ ctrl+i	next cursor position
 
 #### git
 [c	prev git hunk
+	
 ]c	next git hunk
+
 leader hs  stage hunk
 
 #### youcompleteme
