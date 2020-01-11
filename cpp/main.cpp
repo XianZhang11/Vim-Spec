@@ -1,7 +1,7 @@
 #include <iostream>
 #include <stdio.h>
 #include "BST.h"
-
+#include "NQueen.h"
 
 using namespace std;
 int myfunc(int a, int b){
@@ -9,9 +9,7 @@ int myfunc(int a, int b){
     return a+b;
 }
 
-
-int main()
-{
+void TestBST(){
 
     BST<int> tree;
 
@@ -58,6 +56,14 @@ int main()
     cout << "===================="<<endl;
 
     cout <<((tree.Search(15) == nullptr)?"not found":"found")  << " 15" << endl;
+
+}
+
+int main()
+{
+    NQueen nq(15);
+    cout << nq.HasSolution() << endl;
+    nq.print();
 
     return 0;
 }
