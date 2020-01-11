@@ -10,6 +10,13 @@ struct Node{
 };
 
 
+enum MODE{
+
+BREADFIRST,
+DEPTHFIRST,
+INORDER
+
+};
 template <typename T>
 class BST{
     public:
@@ -18,7 +25,15 @@ class BST{
 
         void insert(T);
         Node<T>* Search(T);
-        void print();
+
+        void print(MODE);
+    private:
+        void freeNode(Node<T>*);
+        void dfs(Node<T>*);
+
+        void bfs(Node<T>*);
+        void inorder(Node<T>*);
+
     private:
         Node<T>* root; 
 };
