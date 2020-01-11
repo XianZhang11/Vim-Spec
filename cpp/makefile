@@ -1,13 +1,14 @@
 CC=gcc
-CFLAGS=
+CFLAGS=-std=c++11
 LIBS=-lstdc++
 INCLUDES=
 
-hello: main.o
-	$(CC) $(CFLAGS) main.o -o main  $(LIBS)
+OBJECTS= main.o BST.o
+hello: $(OBJECTS)
+	$(CC) $(CFLAGS) $(OBJECTS) -o main  $(LIBS)
 
 .cpp.o : *.h
-   $(CC) $lCFLAGS) $(INCLUDES) -c $<
+	$(CC) $(CFLAGS) $(INCLUDES) -c $<
 
 clean:
 	rm -f *.o main *.core
