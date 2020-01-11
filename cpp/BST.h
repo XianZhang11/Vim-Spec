@@ -14,7 +14,8 @@ enum MODE{
 
 BREADFIRST,
 DEPTHFIRST,
-INORDER
+INORDER,
+SDEPTHFISRT
 
 };
 template <typename T>
@@ -34,6 +35,7 @@ class BST{
         void bfs(Node<T>*);
         void inorder(Node<T>*);
 
+        void sdfs(Node<T>*);
     private:
         Node<T>* root; 
 };

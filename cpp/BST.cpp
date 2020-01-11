@@ -1,4 +1,6 @@
 #include <iostream>
+#include <stack>
+#include <vector>
 #include <queue>
 #include "BST.h"
 
@@ -63,7 +65,7 @@ template<typename T>
 Node<T>* BST<T>::Search(T v){
 
     Node<T>* r = root;
-    cout << "start search..." << endl;
+    cout << "start search " << v << "..." << endl;
 
     while( r != nullptr && r->value != v){
 
@@ -89,7 +91,7 @@ void BST<T>::dfs(Node<T>* n){
 template<typename T>
 void BST<T>:: print(MODE m){
 
-   switch (m) {
+    switch (m) {
         case MODE::BREADFIRST:
             bfs(root); 
             break;
@@ -98,6 +100,9 @@ void BST<T>:: print(MODE m){
             break;
         case MODE::INORDER:
             inorder(root); 
+            break;
+        case MODE::SDEPTHFISRT:
+            sdfs(root); 
             break;
         default:
             break; 
@@ -132,6 +137,33 @@ void BST<T>::inorder(Node<T>* n){
     inorder(n->left);
     cout << n->value<< endl;
     inorder(n->right);
+}
+template<typename T>
+void BST<T>::sdfs(Node<T>* n){
+    if(!n) return;
+    vector<stack<Node<T>*>> vs(2, stack<Node<T>*>());    
+    int index =0;
+    vs[0].push(n);
+
+    Node<T>* p;
+    while(!vs[index].empty()){
+        p = vs[index].top();
+        vs[index].pop();
+
+        cout << p->value << endl;
+        if(index ==0){
+            if(p->left)vs[1-index].push(p->left);
+            if(p->right) vs[1-index].push(p->right);
+
+        }
+        if(index ==1){
+            if(p->right) vs[1-index].push(p->right);
+            if(p->left)vs[1-index].push(p->left);
+
+        }
+
+        if(vs[index].empty()) index = 1- index;
+    }
 }
 
 template class BST<int>;
