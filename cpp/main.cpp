@@ -2,6 +2,8 @@
 #include <stdio.h>
 #include "BST.h"
 #include "NQueen.h"
+#include "Heap.h"
+#include "LRU.h"
 
 using namespace std;
 int myfunc(int a, int b){
@@ -18,6 +20,7 @@ void TestBST(){
     tree.insert(-5);
     tree.insert(-7);
     tree.insert(-3);
+    tree.insert(-10);
     tree.insert(11);
     tree.insert(9); 
     tree.insert(5); 
@@ -59,11 +62,70 @@ void TestBST(){
 
 }
 
-int main()
-{
-    NQueen nq(15);
+void TestNQ(){
+
+    NQueen nq(9);
     cout << nq.HasSolution() << endl;
     nq.print();
+
+}
+
+void TestHeap(){
+    cout << "Test heap" << endl;
+    heap h;
+    
+    h.insert(15);
+    h.insert(-13);
+    h.insert(10);
+    h.insert(103);
+    h.insert(0);
+    h.insert(10);
+    h.insert(92);
+    h.insert(17);
+
+    while(h.size()) cout << h.pop() << endl;
+
+}
+
+void TestLRU(){
+    cout  << "1, 2, 3, 4, 1, 2, 5, 1, 2, 3, 4, 5" << endl;
+    LRU ca(3);
+
+    ca.refer(1);
+    ca.print();
+    ca.refer(2);
+    ca.print();
+    ca.refer(3);
+    ca.print();
+    ca.refer(4);
+    ca.print();
+    ca.refer(1);
+    ca.print();
+    ca.refer(2);
+    ca.print();
+    ca.refer(5);
+    ca.print();
+    ca.refer(1);
+    ca.print();
+    ca.refer(2);
+    ca.print();
+    ca.refer(3);
+    ca.print();
+    ca.refer(4);
+    ca.print();
+    ca.refer(5);
+    ca.print();
+}
+int main()
+{
+
+    TestBST();
+    
+    TestNQ();
+
+    TestHeap();
+
+    TestLRU();
 
     return 0;
 }
