@@ -3,7 +3,7 @@ CFLAGS=-std=c++11
 LIBS=-lstdc++
 INCLUDES=
 
-OBJECTS= main.o BST.o NQueen.o heap.o LRU.o
+OBJECTS= main.o BST.o NQueen.o heap.o LRU.o QueueWithTwoStacks.o
 hello: $(OBJECTS)
 	$(CC) $(CFLAGS) $(OBJECTS) -o main  $(LIBS)
 

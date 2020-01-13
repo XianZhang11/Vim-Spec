@@ -4,15 +4,12 @@
 #include "NQueen.h"
 #include "Heap.h"
 #include "LRU.h"
+#include "QueueWithTwoStacks.h"
 
 using namespace std;
-int myfunc(int a, int b){
-
-    return a+b;
-}
 
 void TestBST(){
-
+    cout << endl << endl <<"Test BST" << endl;
     BST<int> tree;
 
 
@@ -64,6 +61,7 @@ void TestBST(){
 
 void TestNQ(){
 
+    cout << endl << endl <<"Test NQueen" << endl;
     NQueen nq(9);
     cout << nq.HasSolution() << endl;
     nq.print();
@@ -71,9 +69,9 @@ void TestNQ(){
 }
 
 void TestHeap(){
-    cout << "Test heap" << endl;
+    cout << endl << endl << "Test heap" << endl;
     heap h;
-    
+
     h.insert(15);
     h.insert(-13);
     h.insert(10);
@@ -88,6 +86,8 @@ void TestHeap(){
 }
 
 void TestLRU(){
+
+    cout << endl << endl <<"Test LRU" << endl;
     cout  << "1, 2, 3, 4, 1, 2, 5, 1, 2, 3, 4, 5" << endl;
     LRU ca(3);
 
@@ -116,16 +116,48 @@ void TestLRU(){
     ca.refer(5);
     ca.print();
 }
+void TestQueueWithTwostacks(){
+    cout << endl << endl <<"Test QueueWithTwoStacks" << endl;
+    QueueWithTwoStacks<int> q;
+    cout << "push sequence: 5,1,9,7,5,4,2,8,3" << endl;
+
+    q.Push(5);
+    q.Push(1);
+    q.Push(9);
+    q.Push(7);
+    cout << q.pop()<<endl;
+    q.Push(5);
+    cout << q.pop()<<endl;
+    cout << q.pop()<<endl;
+    q.Push(4);
+    q.Push(2);
+    cout << q.pop()<<endl;
+    q.Push(8);
+    q.Push(3);
+    cout << q.pop()<<endl;
+    cout << q.pop()<<endl;
+    cout << q.pop()<<endl;
+    cout << q.pop()<<endl;
+    cout << q.pop()<<endl;
+    cout << q.pop()<<endl;
+}
 int main()
 {
 
-    TestBST();
-    
-    TestNQ();
+    try {
 
-    TestHeap();
+        TestBST();
 
-    TestLRU();
+        TestNQ();
 
+        TestHeap();
+
+        TestLRU();
+
+        TestQueueWithTwostacks();
+    }catch(string e) {
+        cerr << "Error: " << e << endl;
+        return 1;
+    }
     return 0;
 }
