@@ -1,3 +1,4 @@
+#include <string>
 #include "Heap.h"
 
 using namespace std;
@@ -5,8 +6,8 @@ void heap::insert(int value){
 
     data.push_back(value);
 
-m_size++;
-    
+    m_size++;
+
     int current = m_size-1;
     int index = (m_size-2)/2;
 
@@ -23,7 +24,7 @@ m_size++;
 int heap::pop(){
 
 
-    if(m_size == 0) throw "heap empty";
+    if(m_size == 0) throw string("heap empty");
 
     int re = data[0];
     swap(data[0], data[m_size-1]);
