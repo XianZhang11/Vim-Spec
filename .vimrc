@@ -29,6 +29,7 @@ set smarttab
 set softtabstop=4
  
 set ruler	
+set scrolloff=5
  
 set undolevels=1000	
 set backspace=indent,eol,start	
@@ -47,10 +48,10 @@ map su :set nosplitbelow<CR>:sp<CR>
 map sd :set splitbelow<CR>:sp<CR>
 
 
-map <up> :res +5<CR>
-map <down> :res -5<CR>
-map <left> :vertical resize-5<CR>
-map <right> :vertical resize+5<CR>
+"map <up> :res +5<CR>
+"map <down> :res -5<CR>
+"map <left> :vertical resize-5<CR>
+"map <right> :vertical resize+5<CR>
 
 " plug
 call plug#begin('~/.vim/plugged')
@@ -139,12 +140,13 @@ Plug 'Shougo/echodoc.vim'
 
 call plug#end()
 
-colorscheme default
+colorscheme badwolf
 
 " PlugIn settings
 "
 " NERDTree
 map <leader>t :NERDTreeToggle<CR>
+map <leader>l :TagbarToggle<CR>
 
 " Rainbow
 let g:rainbow_active = 1
@@ -159,7 +161,9 @@ let g:rainbow_load_separately = [
 let g:rainbow_guifgs = ['RoyalBlue3', 'DarkOrange3', 'DarkOrchid3', 'FireBrick']
 let g:rainbow_ctermfgs = ['lightblue', 'lightgreen', 'yellow', 'red', 'magenta']
 
-
+"ALE
+" Set this variable to 1 to fix files when you save them.
+let g:ale_fix_on_save = 1
 
 " snips
 " Trigger configuration. Do not use <tab> if you use

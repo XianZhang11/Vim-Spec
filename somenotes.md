@@ -15,6 +15,11 @@
 | [c        | prev git hunk<br>        |
 | ]c        | next git hunk<br>        |
 | leader hs | stage hunk<br>           |
+|-----------|--------------------------|
+| ys        | add surrounding          |
+| ds        | delete surrounding       |
+| cs        | change surrounding  s    |
+
 
 #### YouCompleteMe
 
