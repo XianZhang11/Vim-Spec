@@ -1,24 +1,30 @@
 # Some useful commands
 
 ## Vim 
-| command   | explain                  |
-|-----------|--------------------------|
-| K         | check manual<br>         |
-| :noh      | shortcut for :nohlsearch |
-|-----------|--------------------------|
-| gg=G      | fix indentation          |
-| zz        | set current line center  |
-|-----------|--------------------------|
-| ctrl+o    | last cursor position<br> |
-| ctrl+i    | next cursor position<br> |
-|-----------|--------------------------|
-| [c        | prev git hunk<br>        |
-| ]c        | next git hunk<br>        |
-| leader hs | stage hunk<br>           |
-|-----------|--------------------------|
-| ys        | add surrounding          |
-| ds        | delete surrounding       |
-| cs        | change surrounding  s    |
+| command    | explain                  |
+|------------|--------------------------|
+| K          | check manual<br>         |
+| :noh       | shortcut for :nohlsearch |
+|------------|--------------------------|
+| gg=G       | fix indentation          |
+| zz         | set current line center  |
+|------------|--------------------------|
+| ctrl+o     | last cursor position<br> |
+| ctrl+i     | next cursor position<br> |
+|------------|--------------------------|
+| [c         | prev git hunk<br>        |
+| ]c         | next git hunk<br>        |
+| leader hs  | stage hunk<br>           |
+|------------|--------------------------|
+| ys         | add surrounding          |
+| ds         | delete surrounding       |
+| cs         | change surrounding  s    |
+|------------|--------------------------|
+| :ls        | list bffers              |
+| :b<number> | switch to buffer         |
+| :bn        | next buffer              |
+| :bp        | previous buffer          |
+|------------|--------------------------|
 
 
 #### YouCompleteMe
