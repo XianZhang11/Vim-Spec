@@ -11,11 +11,11 @@ class NQueen{
         void print();
 
         bool HasSolution();
-private:
+    private:
         bool CheckStat(int row, int colume);
         bool CheckRow(int row);
-    std::vector<std::vector<bool>> board;
-    int size;
+        std::vector<std::vector<bool> > board;
+        int size;
 
 };
 
