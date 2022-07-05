@@ -24,8 +24,19 @@
 | :b<number> | switch to buffer         |
 | :bn        | next buffer              |
 | :bp        | previous buffer          |
+| :bd        | delete current buffer    |
 |------------|--------------------------|
+| <c-w>hjkl  | navigating splits        |
 
+
+### MarkdownPreview
+MarkdownPreview<br>
+MarkdownPreviewStop<br>
+MarkdownPreviewToggle<br>
+TableModeToggle<br>
+
+### Tagbar
+need to install ctags
 
 #### YouCompleteMe
 
