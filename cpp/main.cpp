@@ -5,6 +5,7 @@
 #include "Heap.h"
 #include "LRU.h"
 #include "QueueWithTwoStacks.h"
+#include "LongestSubstr.h"
 
 using namespace std;
 
@@ -141,20 +142,33 @@ void TestQueueWithTwostacks(){
     cout << q.pop()<<endl;
     cout << q.pop()<<endl;
 }
+
+void TestLongestSubstr(){
+
+    cout << endl << endl <<"Test TestLongestSubstr" << endl;
+    string teststr = "pwwkew"; 
+    LongestSubstr l;
+
+    l.Execute(teststr);
+    cout << l.Results() << endl;
+}
+
 int main()
 {
 
     try {
 
-        TestBST();
+        //TestBST();
 
-        TestNQ();
+        //TestNQ();
 
-        TestHeap();
+        //TestHeap();
 
-        TestLRU();
+        //TestLRU();
 
-        TestQueueWithTwostacks();
+        TestLongestSubstr();
+
+        //TestQueueWithTwostacks();
 
     }catch(string e) {
         cerr << "Error: " << e << endl;
